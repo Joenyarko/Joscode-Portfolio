@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+    <title>Joe Nyarko | Software Engineer & Virtual Assistant</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Animated Background Elements -->
+    <div class="bg-blur-1"></div>
+    <div class="bg-blur-2"></div>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">JN</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero" class="nav-link"><span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link"><span>About</span></a></li>
+                    <li><a href="#skills" class="nav-link"><span>Skills</span></a></li>
+                    <li><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+                    <li><a href="#contact" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <!-- Profile Picture Container -->
+            <div class="profile-picture">
+                <img src="Joejoe2.png" alt="Joe Nyarko Profile">
+            </div>
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h4 class="greeting">Hello, my name is</h4>
+                        <h1 class="name">Joe Nyarko</h1>
+                        <h2 class="title">I build <span class="typing-text"></span></h2>
+                        <p class="intro">
+                            Software engineer crafting digital experiences and virtual assistant streamlining business
+                            operations.
+                            I create solutions that blend technical excellence with operational efficiency.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn primary">
+                                <span>View Projects</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="btn secondary">
+                                <span>Let's Talk</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-container">
+                            <div class="glow"></div>
+                            <div class="pattern"></div>
+                            <img src="new2.jpg" alt="Joe Nyarko" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll down</span>
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Get to know me better</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img src="new4.jpg" alt="Joe Nyarko">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Who am I?</h3>
+                        <p>
+                            I'm a passionate <strong>Software Engineer</strong> and <strong>Virtual Assistant</strong>
+                            with expertise in multiple programming languages and business operations. My journey in
+                            technology has equipped me with a unique blend of technical and administrative skills.
+                        </p>
+
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Name:</div>
+                                <div class="info-value">Joe Nyarko</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Email:</div>
+                                <div class="info-value">joenyarko2001@gmail.com</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Experience:</div>
+                                <div class="info-value">3+ Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">From:</div>
+                                <div class="info-value">Ghana</div>
+                            </div>
+                        </div>
+
+                        <div class="tabs">
+                            <div class="tab-header">
+                                <div class="tab-btn active" data-tab="skills">Skills</div>
+                                <div class="tab-btn" data-tab="education">Education</div>
+                                <div class="tab-btn" data-tab="experience">Experience</div>
+                            </div>
+                            <div class="tab-content active" id="skills-tab">
+                                <p>Full-stack development with expertise in web and desktop applications:</p>
+                                <div class="skill-bars">
+                                    <div class="skill-bar">
+                                        <div class="skill-info">
+                                            <span>PHP/Laravel</span>
+                                            <span>90%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-info">
+                                            <span>C#/.NET</span>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-info">
+                                            <span>SQL</span>
+                                            <span>90%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="education-tab">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2021 - 2023</div>
+                                        <div class="timeline-content">
+                                            <h4>Advanced Diploma in Software Engineering</h4>
+                                            <p>IPMC</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2019 - 2020</div>
+                                        <div class="timeline-content">
+                                            <h4>Virtual Assistant</h4>
+                                            <p>ALX</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="experience-tab">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2022 - Present</div>
+                                        <div class="timeline-content">
+                                            <h4>Web Developer</h4>
+                                            <p>Freelancer</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2021 - 2023</div>
+                                        <div class="timeline-content">
+                                            <h4>Office Assistant</h4>
+                                            <p>Absa Bank Limited</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section bg-gray">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What I Do</h2>
+                    <p class="section-subtitle">Services I offer</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Building responsive, user-friendly websites and web applications with modern technologies.
+                        </p>
+                        <div class="service-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Laravel</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Desktop Applications</h3>
+                        <p>Developing robust desktop solutions for Windows with .NET framework.</p>
+                        <div class="service-tags">
+                            <span>C#</span>
+                            <span>.NET</span>
+                            <span>WPF</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Virtual Assistance</h3>
+                        <p>Comprehensive administrative support and IT services for businesses.</p>
+                        <div class="service-tags">
+                            <span>Admin</span>
+                            <span>IT Support</span>
+                            <span>Coordination</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Skills</h2>
+                    <p class="section-subtitle">Technologies I work with</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skills-chart">
+                        <div class="chart-container">
+                            <canvas id="skillsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-category">
+                            <h3>Frontend</h3>
+                            <div class="tags">
+                                <span>HTML5</span>
+                                <span>CSS3/Sass</span>
+                                <span>JavaScript</span>
+                                <span>TypeScript</span>
+                                <span>Vue.js</span>
+                                <span>Bootstrap</span>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Backend</h3>
+                            <div class="tags">
+                                <span>PHP</span>
+                                <span>Laravel</span>
+                                <span>C#</span>
+                                <span>.NET</span>
+                                <span>Java</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Databases</h3>
+                            <div class="tags">
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                                <span>MongoDB</span>
+                                <span>SQL Server</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Tools & Other</h3>
+                            <div class="tags">
+                                <span>Git</span>
+                                <span>Docker</span>
+                                <span>AWS</span>
+                                <span>Azure</span>
+                                <span>Figma</span>
+                                <span>Postman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-gray">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Projects</h2>
+                    <p class="section-subtitle">Featured work</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="desktop">Desktop</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="ECOM.png" alt="E-Commerce Platform">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Application</span>
+                            <h3>E-Commerce Platform</h3>
+                            <p>Full-featured online shopping platform with admin dashboard and payment integration.</p>
+                            <div class="project-tech">
+                                <span>Laravel</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="desktop">
+                        <div class="project-image">
+                            <img src="INV.png" alt="Inventory System">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Desktop Application</span>
+                            <h3>Inventory Management</h3>
+                            <p>Comprehensive inventory system for small businesses with reporting features.</p>
+                            <div class="project-tech">
+                                <span>C#</span>
+                                <span>.NET</span>
+                                <span>SQL Server</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="B.A.png" alt="Business Dashboard">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Application</span>
+                            <h3>Business Analytics Dashboard</h3>
+                            <p>Interactive dashboard for visualizing business metrics and KPIs.</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer">
+                    <a href="#" class="btn secondary">
+                        <span>View All Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Client Testimonials</h2>
+                    <p class="section-subtitle">What people say about my work</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>
+                                Joe delivered an exceptional e-commerce platform that exceeded our expectations.
+                                His attention to detail and problem-solving skills are remarkable.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="pf6.jpg" alt="Everett Aryeh">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Everett Aryeh</h4>
+                                    <span>CEO, Retail Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>
+                                The inventory system Joe developed has streamlined our operations significantly.
+                                His technical expertise and professionalism made the entire process smooth.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="VIOTOR.png" alt="Viotor Okine">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Viotor Okine</h4>
+                                    <span>CEO, Viotor Trading Enterprise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's work together</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out to me for project inquiries or just to say hello!</p>
+
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <a href="mailto:joenyarko2001@gmail.com">joenyarko2001@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Phone</h4>
+                                <a href="tel:+233501354521">+233 (501) 354-521</a>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Location</h4>
+                                <span>Accra, Ghana</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/Joenyarko" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/joenyarko/" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contactForm" action="https://formspree.io/f/mpwrwzvd" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="email" name="_replyto" required>
+                                <label for="email">Your Email</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" id="subject" name="_subject" required>
+                                <label for="subject">Subject</label>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+
+                            <button type="submit" class="btn primary">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">JN</div>
+                    <p>Software Engineer & Virtual Assistant</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Desktop Applications</a></li>
+                        <li><a href="#">Virtual Assistance</a></li>
+                        <li><a href="#">Consultation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on my latest projects and articles.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Joscode. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Joenyarko"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/joenyarko/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
