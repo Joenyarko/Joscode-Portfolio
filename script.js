@@ -169,80 +169,50 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Form Submission
-    // Form Submission using Formspree
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) { // Added 'async' keyword here
-        e.preventDefault(); // Prevent the default form submission (page reload)
+    // Form Submission using EmailJS
+    // Initialize EmailJS with your public key
+    emailjs.init('RnDMjpS3SRn79Wa_d');
+    
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
 
-        const form = e.target; // Get the form element that triggered the event
-        const formData = new FormData(form); // Create FormData object from the form
-
-        try {
-             // Show a loading SweetAlert
-                    Swal.fire({
-                        title: 'Sending message...',
-                        text: 'Please wait a moment.',
-                        allowOutsideClick: false,
-                        didOpen: () => {
-                            Swal.showLoading();
-                        }
-                    });
-            // Send the form data to Formspree's endpoint
-            const response = await fetch(form.action, { // Use form.action to get the URL from HTML
-                method: form.method, // Use form.method (POST) from HTML
-                body: formData, // Send the FormData object
-                headers: {
-                    'Accept': 'application/json' // Tell Formspree we expect a JSON response
+            // Show a loading SweetAlert
+            Swal.fire({
+                title: 'Sending message...',
+                text: 'Please wait a moment.',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
                 }
             });
 
-            if (response.ok) { // Check if the HTTP response status is 2xx (success)
-                 Swal.fire({
-                            icon: 'success',
-                            title: 'Message Sent!',
-                            text: 'Thank you for your message! I will get back to you soon.',
-                            confirmButtonText: 'OK',
-                            customClass: {
-                                confirmButton: 'swal-button-primary' // Custom class for styling button
-                            }
-                        });
-                form.reset(); // Clear the form fields
-            } else {
-                // If response is not OK, try to parse error details from Formspree
-                const data = await response.json();
-                let errorMessage = 'Failed to send message. Please try again.';
-                if (data.errors) {
-                    // If Formspree provides specific errors, display them
-                    errorMessage += '\nDetails: ' + data.errors.map(err => err.message).join(', ');
-                }
-               Swal.fire({
-                            icon: 'error',
-                            title: 'Submission Failed',
-                            text: errorMessage,
-                            confirmButtonText: 'OK',
-                            customClass: {
-                                confirmButton: 'swal-button-error' // Custom class for styling button
-                            }
-                        });
-            }
-        } catch (error) {
-            // Catch any network errors or other unexpected issues
-            console.error('Error submitting form:', error);
-            Swal.fire({
-                        icon: 'error',
-                        title: 'Network Error',
-                        text: 'An unexpected error occurred. Please check your internet connection and try again.',
+            // Send email using EmailJS
+            emailjs.sendForm('service_15qt7u9', 'template_77bb575', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Message Sent!',
+                        text: 'Thank you for your message! I will get back to you soon.',
                         confirmButtonText: 'OK',
-                        customClass: {
-                            confirmButton: 'swal-button-error' // Custom class for styling button
-                        }
+                        confirmButtonColor: '#ff2d2d'
                     });
-        }
-    });
-
+                    contactForm.reset(); // Clear the form fields
+                }, function(error) {
+                    console.error('FAILED...', error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Submission Failed',
+                        text: 'Failed to send message. Please try again or contact me directly via email.',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#ff2d2d'
+                    });
+                });
+        });
     }
+
     
     // Animate elements on scroll
     const animateOnScroll = function() {
