@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+    <title>Projects | Joe Nyarko - Software Engineer & Virtual Assistant</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Animated Background Elements -->
+    <div class="bg-blur-1"></div>
+    <div class="bg-blur-2"></div>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">JN</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link"><span>Home</span></a></li>
+                    <li><a href="index.html#about" class="nav-link"><span>About</span></a></li>
+                    <li><a href="index.html#skills" class="nav-link"><span>Skills</span></a></li>
+                    <li><a href="projects.html" class="nav-link active"><span>Projects</span></a></li>
+                    <li><a href="index.html#contact" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <!-- Profile Picture Container -->
+            <div class="profile-picture">
+                <img src="Joejoe2.png" alt="Joe Nyarko Profile">
+            </div>
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Projects Hero Section -->
+        <section class="hero" style="padding: 120px 0 60px;">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                    <h1 class="section-title" style="font-size: 3rem;">My Projects</h1>
+                    <p class="section-subtitle">A showcase of my work in web development, desktop applications, and more
+                    </p>
+                    <div class="divider" style="margin: 20px auto;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="desktop">Desktop</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- E-Commerce Platform -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="ECOM.png" alt="E-Commerce Platform">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Application</span>
+                            <h3>E-Commerce Platform</h3>
+                            <p>Full-featured online shopping platform with admin dashboard and payment integration.</p>
+                            <div class="project-tech">
+                                <span>Laravel</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inventory Management -->
+                    <div class="project-card" data-category="desktop">
+                        <div class="project-image">
+                            <img src="INV.png" alt="Inventory System">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Desktop Application</span>
+                            <h3>Inventory Management</h3>
+                            <p>Comprehensive inventory system for small businesses with reporting features.</p>
+                            <div class="project-tech">
+                                <span>C#</span>
+                                <span>.NET</span>
+                                <span>SQL Server</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Analytics Dashboard -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="B.A.png" alt="Business Dashboard">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Application</span>
+                            <h3>Business Analytics Dashboard</h3>
+                            <p>Interactive dashboard for visualizing business metrics and KPIs.</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Website 1 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="desksetup.jpeg" alt="Portfolio Website">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Application</span>
+                            <h3>Professional Portfolio</h3>
+                            <p>Modern, responsive portfolio website showcasing creative work and projects.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Website -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="new1.jpg" alt="Business Website">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Application</span>
+                            <h3>Corporate Website</h3>
+                            <p>Professional business website with modern design and smooth animations.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Creative Website -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="new3.jpg" alt="Creative Website">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Application</span>
+                            <h3>Creative Agency Site</h3>
+                            <p>Dynamic website for creative agency with interactive elements and stunning visuals.</p>
+                            <div class="project-tech">
+                                <span>Vue.js</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="#" class="btn small">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer" style="margin-top: 60px;">
+                    <a href="index.html" class="btn secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to Home</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">JN</div>
+                    <p>Software Engineer & Virtual Assistant</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#skills">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Desktop Applications</a></li>
+                        <li><a href="#">Data Analysis</a></li>
+                        <li><a href="#">Virtual Assistance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on my latest projects and articles.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Joscode. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Joenyarko"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/joenyarko/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
