@@ -109,9 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Skills Chart
-    const ctx = document.getElementById('skillsChart').getContext('2d');
-    const skillsChart = new Chart(ctx, {
+    // Skills Chart (rendered only if visible)
+    const chartCanvas = document.getElementById('skillsChart');
+    if (chartCanvas && chartCanvas.parentElement && chartCanvas.parentElement.offsetParent !== null) {
+        const ctx = chartCanvas.getContext('2d');
+        const skillsChart = new Chart(ctx, {
         type: 'radar',
         data: {
             labels: ['Frontend', 'Backend', 'Database', 'UI/UX', 'DevOps', 'Mobile'],
@@ -168,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
             maintainAspectRatio: false
         }
     });
+    }
     
     // Form Submission using EmailJS
     // Initialize EmailJS with your public key
@@ -233,10 +236,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Better touch handling for mobile menu
-menuToggle.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-    this.click();
-}, { passive: false });
+const mobileMenuToggle = document.querySelector('.menu-toggle');
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        this.click();
+    }, { passive: false });
+}
 
 // Prevent zooming on double-tap for buttons
 const buttons = document.querySelectorAll('button, .btn, .nav-link');
@@ -248,15 +254,16 @@ buttons.forEach(button => {
 
 // Add this to your existing scroll event listener for header
 let lastScroll = 0;
+const pageHeader = document.querySelector('header');
 window.addEventListener('scroll', function() {
     const currentScroll = window.scrollY;
     
     // For mobile, hide header on scroll down
-    if (window.innerWidth <= 768) {
+    if (pageHeader && window.innerWidth <= 768) {
         if (currentScroll > lastScroll && currentScroll > 50) {
-            header.style.transform = 'translateY(-100%)';
+            pageHeader.style.transform = 'translateY(-100%)';
         } else {
-            header.style.transform = 'translateY(0)';
+            pageHeader.style.transform = 'translateY(0)';
         }
     }
     
